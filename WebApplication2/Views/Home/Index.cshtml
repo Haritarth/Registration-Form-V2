@@ -1,0 +1,106 @@
+﻿@model WebApplication2.Models.Employee
+@{
+    ViewBag.Title = "Index";
+}
+@using (Html.BeginForm("SubmitEmp", "Home", FormMethod.Post))
+{
+    <table class=" table table-responsive table-bordered ">
+        <tr>
+            <td>First Name</td>
+            <td>
+                @Html.TextBox("FirstName", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.FirstName, "Please enter First Name", new { @class = "text- danger", style = "display:none" })
+            </td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>
+                @Html.TextBox("LastName", null, htmlAttributes: new { @class = "form-control" })
+
+            </td>
+        </tr>
+        <tr>
+            <td>Middle Name</td>
+            <td>
+                @Html.TextBox("MiddleName", null, htmlAttributes: new { @class = "form-control" })
+
+            </td>
+        </tr>
+        <tr>
+            <td>Telephone Number</td>
+            <td>
+                @Html.TextBox("TelephoneNumber", null, htmlAttributes: new { @class = "form-control" })
+
+            </td>
+        </tr>
+        <tr>
+            <td>Email Address </td>
+            <td>
+                @Html.TextBox("EmailAddress", null, htmlAttributes: new { @class = "form-control" })
+
+            </td>
+        </tr>
+        <tr>
+            <td>Identification Number</td>
+            <td>
+                @Html.TextBox("IdentificationNumber", null, htmlAttributes: new { @class = "form-control" })
+
+            </td>
+        </tr>
+        <tr>
+            <td>Date of Birth </td>
+            <td>
+                <input type="date" id="DateofBirth" name="DateofBirth">
+                <!--@Html.TextBox("DateOfBirth", null, htmlAttributes: new { @class = "form-control" })-->
+
+            </td>
+        </tr>
+        <tr>
+            <td>Street Address</td>
+            <td>
+                @Html.TextBox("StreetAddress", null, htmlAttributes: new { @class = "form-control" })
+
+            </td>
+        </tr>
+        <tr>
+            <td>Secondary Address</td>
+            <td>
+                @Html.TextBox("SecondaryAddress", null, htmlAttributes: new { @class = "form-control" })
+
+            </td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>
+                @Html.TextBox("City", null, htmlAttributes: new { @class = "form-control" })
+
+            </td>
+        </tr>
+        <tr>
+            <td>State</td>
+            <td>
+                @Html.TextBox("State", null, htmlAttributes: new { @class = "form-control" })
+
+            </td>
+        </tr>
+        <tr>
+            <td>Zip</td>
+            <td>
+                @Html.TextBox("Zip", null, htmlAttributes: new { @class = "form-control" })
+
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="right">
+                <input type="submit" value="Submit" class="btn btn-success" />
+            </td>
+        </tr>
+    </table>
+}
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/custom-validator")
+}*@
+
